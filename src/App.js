@@ -11,10 +11,9 @@ function App() {
       <header className="App-header">
         <Intro />
       </header>
-          <About />
-          <Projects />
-          <BlogPosts />
-        
+      <About />
+      <Projects />
+      <BlogPosts />      
     </div>
   );
 }
