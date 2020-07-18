@@ -8,12 +8,13 @@ import BlogPosts from './componets/BlogPosts'
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-      </header> */}
+      <header className="App-header">
         <Intro />
-        <About />
-        <Projects />
-        <BlogPosts />
+      </header>
+          <About />
+          <Projects />
+          <BlogPosts />
+        
     </div>
   );
 }

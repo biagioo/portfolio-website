@@ -2,12 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from 'redux-thunk';
+import BlogPosts from './reducers/BlogPosts'
 import * as serviceWorker from './serviceWorker';
 
+const store = createStore(BlogPosts, composeWithDevTools(
+  applyMiddleware(thunk),
+));
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <Provider store={store} >
+      <App />
+    </Provider>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
