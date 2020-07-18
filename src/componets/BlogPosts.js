@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchBlogPosts} from '../actions/blogPosts';
-// import axios from "axios";
+import Posts from './blog/Posts'
 
 
 class BlogPosts extends Component {
@@ -14,9 +14,10 @@ class BlogPosts extends Component {
   render() {
     console.log(this.props.posts);
     return (
-      <h1>
-        Blogs need a pic, short summary, and link to dev.to or user dev.to API
-      </h1>
+        <div> 
+         <h2>Most Recent Blog Posts</h2> 
+        {this.props.posts.map(post => <Posts key={post.id} post={post}/>)}
+        </div>
     );
   }
 }
