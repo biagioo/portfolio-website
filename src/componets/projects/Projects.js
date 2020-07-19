@@ -5,7 +5,7 @@ class Projects extends Component {
         return(
             <h1> 
                 {/* Projects need a pic link to github and video demo */}
-                Hello World
+                Recent Projects
             </h1>
         )
     }

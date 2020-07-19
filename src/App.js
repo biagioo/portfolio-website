@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import Intro from './componets/Intro'
 import About from './componets/About'
-import Projects from './componets/Projects'
-import BlogPosts from './componets/BlogPosts'
+import Projects from './componets/projects/Projects'
+import BlogPosts from './componets/blog/BlogContainer'
 
 function App() {
   return (

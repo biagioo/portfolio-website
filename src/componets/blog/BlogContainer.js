@@ -1,23 +1,21 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchBlogPosts} from '../actions/blogPosts';
-import Posts from './blog/Posts'
+import {fetchBlogPosts} from '../../actions/blogPosts'
+import Posts from './Posts'
 
 
-class BlogPosts extends Component {
+class BlogContainer extends Component {
 
   componentDidMount() {
     this.props.fetchBlogPosts();
-
   }
 
   render() {
-    console.log(this.props.posts);
     return (
-        <div> 
+      <div> 
          <h2>Most Recent Blog Posts</h2> 
         {this.props.posts.map(post => <Posts key={post.id} post={post}/>)}
-        </div>
+      </div>
     );
   }
 }
@@ -28,4 +26,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, {fetchBlogPosts})(BlogPosts);
+export default connect(mapStateToProps, {fetchBlogPosts})(BlogContainer);
