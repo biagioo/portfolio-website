@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.scss';
 import { Container } from 'react-bootstrap';
 
@@ -10,7 +10,7 @@ import BlogPosts from './componets/blog/BlogContainer'
 
 function App() {
   return (
-    <Container>
+    <Container fluid>
       <div className="App">
         <header className="App-header">
           <Intro />

@@ -8,6 +8,9 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk';
 import BlogPosts from './reducers/BlogPosts'
 import * as serviceWorker from './serviceWorker';
+// import $ from 'jquery';
+// import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const store = createStore(BlogPosts, composeWithDevTools(
   applyMiddleware(thunk),
