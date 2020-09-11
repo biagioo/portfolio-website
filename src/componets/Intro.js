@@ -3,7 +3,7 @@ import {Container} from 'react-bootstrap';
 class Intro extends Component {
   render() {
     return (
-      <Container>
+      <Container className = "intro-header">
         <h2>Welcome</h2>
         <h4>My name is Biagio Mendolia</h4>
         <h5>I build Web Applications.</h5>
